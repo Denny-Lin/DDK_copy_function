@@ -13,6 +13,8 @@ This repo will show something for image processing.
 * Think about what the functions are and I should create? 
 * I think we should change the original image to black & white image below: <br>
 ![image](https://user-images.githubusercontent.com/67073582/124179100-e38d0280-dae4-11eb-8fc4-b53b04bccd0b.png) <br>
+* Image Denoising <br>
+![image](https://user-images.githubusercontent.com/67073582/124179799-e3413700-dae5-11eb-91dc-8e9242279b8a.png)
 * ...
 
 
