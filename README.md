@@ -1,4 +1,4 @@
-# DDK_copy_function
+# DDK_image_processing
 This repo will do something for image processing. 
 * Just try and learn by myself.
 * Read an image. 
