@@ -6,6 +6,11 @@ This repo will show something for image processing.
 * Output a new file/image.
 * ...
 
+## What will I do?
+* First, choose a basic type of a image.
+* We should focus on OCR, not the decode/encode of a image.
+* ...
+
 
 ## References
 * https://homepages.inf.ed.ac.uk/rbf/BOOKS/PHILLIPS/cips2ed.pdf
