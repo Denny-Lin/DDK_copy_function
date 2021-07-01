@@ -1,5 +1,5 @@
 # DDK_image_processing
-This repo will do something for image processing. 
+This repo will show something for image processing. 
 * Just try and learn by myself.
 * Read an image. 
 * Do OCR or ...
