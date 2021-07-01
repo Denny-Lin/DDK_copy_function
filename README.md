@@ -9,6 +9,8 @@ This repo will show something for image processing.
 ## What will I do?
 * First, choose a basic type of a image.
 * We should focus on OCR, not the decode/encode of a image.
+* Set the fixed buffer to eliminate the times of copy & paste between the user and kernel space.
+* Think about what the functions I should create?
 * ...
 
 
