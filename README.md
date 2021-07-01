@@ -1,8 +1,9 @@
 # DDK_copy_function
 This repo will do something for image processing. 
-* Read image 
-* OCR or ...
-* output a new file/image
+* Just try and learn by myself.
+* Read an image. 
+* Do OCR or ...
+* Output a new file/image.
 * ...
 
 
