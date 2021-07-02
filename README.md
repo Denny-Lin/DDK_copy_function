@@ -3,6 +3,10 @@ This repo will show something for image processing.
 * Just try and learn by myself.
 * Read an image. 
 * Do OCR or ...
+  * Pre-processing
+  * Text recognition
+  * Post-processing
+  * Application-specific optimizations 
 * Output a new file/image.
 * ...
 
