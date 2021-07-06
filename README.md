@@ -24,7 +24,7 @@ This repo will show something for image processing.
 * Just think if all the pixels are on the right or left side of the middle tone color .
 * So can we count all the pixels and find a peak of pixel to be the threshold?, such as this image below: <br>
 ![image](https://user-images.githubusercontent.com/67073582/124599950-d0898200-de98-11eb-81f0-df71f5a52a54.png) <br>
-* It still have a problem that same degree of pixels can get together in different place of a image.
+* It still have a problem that same degree of pixels can get together in different place of a image, it means two peaks or more.
 * ... <br>
 * Image Denoising - Looks like if just a white point in black, we should change this white point to a black point.
 ![image](https://user-images.githubusercontent.com/67073582/124179799-e3413700-dae5-11eb-91dc-8e9242279b8a.png)
