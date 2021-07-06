@@ -32,6 +32,11 @@ This repo will show something for image processing.
 * ...
 
 
+## What can we have if we finish this project?
+* We can have our own library "DDK_CV".
+* Do AI.
+* ...
+
 ## References
 * https://homepages.inf.ed.ac.uk/rbf/BOOKS/PHILLIPS/cips2ed.pdf
 * https://en.wikipedia.org/wiki/Optical_character_recognition
