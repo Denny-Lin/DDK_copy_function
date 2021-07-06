@@ -22,7 +22,7 @@ This repo will show something for image processing.
 ![image](https://user-images.githubusercontent.com/67073582/124598538-50165180-de97-11eb-9b64-0772149a21b6.png) <br>
 * The first idea coming to mind is choosing the middle tone color, but that's wrong. 
 * Just think if all the pixels are on the right or left side of the middle tone color .
-* So can we count all the pixels and find the average pixel to be the threshold?, such as this image below: <br>
+* So can we count all the pixels and find a peak of pixel to be the threshold?, such as this image below: <br>
 ![image](https://user-images.githubusercontent.com/67073582/124599950-d0898200-de98-11eb-81f0-df71f5a52a54.png) <br>
 * It still have a problem that same degree of pixels can get together in different place of a image.
 * ... <br>
