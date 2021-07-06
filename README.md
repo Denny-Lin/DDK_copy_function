@@ -20,6 +20,7 @@ This repo will show something for image processing.
 * let's think of the algorithm here.
 * greyscale <br>
 ![image](https://user-images.githubusercontent.com/67073582/124598538-50165180-de97-11eb-9b64-0772149a21b6.png) <br>
+![image](https://user-images.githubusercontent.com/67073582/124650637-83bf9e80-decc-11eb-9948-0cfd599d647e.png) <br>
 * The first idea coming to mind is choosing the middle tone color, but that's wrong. 
 * Just think if all the pixels are on the right or left side of the middle tone color .
 * So can we count all the pixels and find a peak of pixel to be the threshold?, such as this image below: <br>
