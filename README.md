@@ -54,4 +54,5 @@ This repo will show something for image processing.
 * https://gist.github.com/t1ina2003/6851912
 * https://gist.github.com/FourMiao/5386494
 * https://blog.csdn.net/fengxianghui01/article/details/85076319
+* https://www.jinnsblog.com/2009/08/bmp-format-graphic-illustration.html
 * ... 
