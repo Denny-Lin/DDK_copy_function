@@ -9,6 +9,13 @@ This repo will show something for image processing.
   * Application-specific optimizations 
 * Output a new file/image.
 * ...
+## Prepare a \*.bmp image
+* Just google a picture and download it.
+* Use windows paint to open it and save as 24-bit bmp.
+* #include<windows.h>
+* BITMAPINFOHEADER head;
+* fread(&head, sizeof(BITMAPINFOHEADER), 1, fp);
+* ... 
 
 ## What will I do?
 * First, choose a basic type of a image.
