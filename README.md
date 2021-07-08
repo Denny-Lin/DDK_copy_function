@@ -13,7 +13,7 @@ This repo will show something for image processing.
 * Just google a picture and download it.
 * Use windows paint to open it and save as 24-bit bmp. <br>
 ![image](https://user-images.githubusercontent.com/67073582/124918983-3eb07f00-e028-11eb-9669-a29985e54e0d.png) <br>
-* #include<windows.h>
+* We can use structures from #include<windows.h> or create a structure follow this image.
 * BITMAPINFOHEADER head;
 * // size_t fread(void *ptr, size_t size, size_t nmemb, FILE *stream)
 * fread(&head, sizeof(BITMAPINFOHEADER), 1, fp);
