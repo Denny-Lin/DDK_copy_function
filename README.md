@@ -14,7 +14,8 @@ This repo will show something for image processing.
 * Use windows paint to open it and save as 24-bit bmp.
 * #include<windows.h>
 * BITMAPINFOHEADER head;
-* fread(&head, sizeof(BITMAPINFOHEADER), 1, fp);// size_t fread(void *ptr, size_t size, size_t nmemb, FILE *stream)
+* // size_t fread(void *ptr, size_t size, size_t nmemb, FILE *stream)
+* fread(&head, sizeof(BITMAPINFOHEADER), 1, fp);
 * ... 
 
 ## What will I do?
