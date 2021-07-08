@@ -49,4 +49,5 @@ This repo will show something for image processing.
 * https://en.wikipedia.org/wiki/Optical_character_recognition
 * https://en.wikipedia.org/wiki/Thresholding_(image_processing)
 * https://en.wikipedia.org/wiki/Grayscale
+* https://gist.github.com/t1ina2003/6851912
 * ... 
