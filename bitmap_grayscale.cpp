@@ -14,7 +14,7 @@ void loadImage(FILE* fin, uc* r, uc* g, uc *b, int height, int width){
         for(int j=0;j<width;j++){
             *(r+i*width+j)=t[3*j+2];//紅色，從左下角開始讀取 
             *(g+i*width+j)=t[3*j+1];//綠色 
-            *(b+i*width+j)=t[3*j];	//藍色 
+            *(b+i*width+j)=t[3*j];  //藍色 
         }
     }
     
