@@ -17,7 +17,7 @@ This repo will show something for image processing.
 * BITMAPINFOHEADER head;
 * // size_t fread(void *ptr, size_t size, size_t nmemb, FILE *stream)
 * fread(&head, sizeof(BITMAPINFOHEADER), 1, fp);
-* ... 
+* I found a concept and code online and that's a simple code, so we should modify it.
 
 ## What will I do?
 * First, choose a basic type of a image.
