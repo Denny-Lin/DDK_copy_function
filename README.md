@@ -18,6 +18,7 @@ This repo will show something for image processing.
 * // size_t fread(void *ptr, size_t size, size_t nmemb, FILE *stream)
 * fread(&head, sizeof(BITMAPINFOHEADER), 1, fp);
 * I found a concept and code online and that's a simple code, so we should modify it.
+* for example, it should be strcut or namespce{class{function(){}}}.
 * Although I am busy recently, I still keep going for this project.
 
 ## What will I do?
