@@ -4,17 +4,17 @@
 typedef unsigned char uc;
 
 void loadImage(FILE* fin, uc* r, uc* g, uc *b, int height, int width){
-    //fin§Â•Û´¸∞w§w∏gπL§F®‚≠”§Â•Û¿Y	 
-    int stride=((24*width+31)>>5)<<2;//®˙4™∫≠øº∆
+    //finÊñá‰ª∂ÊåáÈáùÂ∑≤Á∂ìÈÅé‰∫ÜÂÖ©ÂÄãÊñá‰ª∂È†≠	 
+    int stride=((24*width+31)>>5)<<2;//Âèñ4ÁöÑÂÄçÊï∏
     uc *t=(uc*)malloc(stride); 
     
     for(int i=0;i<height;i++){
         fread(t,1,stride,fin);
         
         for(int j=0;j<width;j++){
-            *(r+i*width+j)=t[3*j+2];//¨ı¶‚°A±q•™§U®§∂}©l≈™®˙ 
-            *(g+i*width+j)=t[3*j+1];//∫Ò¶‚ 
-            *(b+i*width+j)=t[3*j];	//¬≈¶‚ 
+            *(r+i*width+j)=t[3*j+2];//Á¥ÖËâ≤ÔºåÂæûÂ∑¶‰∏ãËßíÈñãÂßãËÆÄÂèñ 
+            *(g+i*width+j)=t[3*j+1];//Á∂†Ëâ≤ 
+            *(b+i*width+j)=t[3*j];	//ËóçËâ≤ 
         }
     }
     
@@ -23,45 +23,44 @@ void loadImage(FILE* fin, uc* r, uc* g, uc *b, int height, int width){
 }
 
 void removeBitmapColor(FILE* fout,int height,int width,uc (*fun)(uc r,uc g,uc b),uc *r,uc *g,uc *b){
-    //fun¨∞≠p∫‚¶«´◊™∫®Áº∆´¸∞w
+    //funÁÇ∫Ë®àÁÆóÁÅ∞Â∫¶ÁöÑÂáΩÊï∏ÊåáÈáù
     int stride=((24*width+31)>>5)<<2;
     uc *t=(uc*)malloc(stride);
     uc temp;
     
     for(int i=0;i<height;i++){
         for(int j=0;j<width;j++){
-            temp=(*fun)(*(r+i*width+j),*(g+i*width+j),*(b+i*width+j));
-			//printf("%d ",temp);
+		temp=(*fun)(*(r+i*width+j),*(g+i*width+j),*(b+i*width+j));
+		//printf("%d ",temp);
 
-			/*´ÏŒ`≠Ïπœ 
-            t[3*j]=*(b+i*width+j);
-            t[3*j+1]=*(g+i*width+j);
-            t[3*j+2]=*(r+i*width+j);
-			*/  
+		/*ÊÅ¢Â§çÂéüÂúñ 
+		t[3*j]=*(b+i*width+j);
+		t[3*j+1]=*(g+i*width+j);
+		t[3*j+2]=*(r+i*width+j);
+		*/  
 
-			//πœπ≥•h¶‚°A≈‹¶®¶«´◊πœπ≥
-            t[3*j]=t[3*j+1]=t[3*j+2]=temp;  
-			
-            
-			//≈‹¶®∂¬•’πœπ≥ 
-			/*
-	        if(temp>128)
-	            t[3*j]=t[3*j+1]=t[3*j+2]=(uc)255;
-	        else
-	            t[3*j]=t[3*j+1]=t[3*j+2]=0;
-			*/
-	    }
+		//ÂúñÂÉèÂéªËâ≤ÔºåËÆäÊàêÁÅ∞Â∫¶ÂúñÂÉè
+		t[3*j]=t[3*j+1]=t[3*j+2]=temp;  
+
+		//ËÆäÊàêÈªëÁôΩÂúñÂÉè 
+		/*
+		if(temp>128)
+		t[3*j]=t[3*j+1]=t[3*j+2]=(uc)255;
+		else
+		t[3*j]=t[3*j+1]=t[3*j+2]=0;
+		*/
+	 }
 	              
-	    fwrite(t,1,stride,fout);		
+	 fwrite(t,1,stride,fout);		
     }
 }   
 
-uc func1(uc r,uc b,uc g){//matlab•h¶‚∫‚™k 
+uc func1(uc r,uc b,uc g){//matlabÂéªËâ≤ÁÆóÊ≥ï 
     float f=0.2989*(int)r+0.587*(int)b+0.114*(int)g;
     return uc((int)f);
 }
 
-uc func2(uc r,uc b,uc g){//opencv•h¶‚∫‚™k 
+uc func2(uc r,uc b,uc g){//opencvÂéªËâ≤ÁÆóÊ≥ï 
     float f=0.299*(int)r+0.587*(int)b+0.114*(int)g;
 } 
 
@@ -80,22 +79,22 @@ void close(FILE* f1, FILE* f2, uc* r, uc* g, uc* b){
 
 int main(int argc, char* argv[]){
     
-    BITMAPFILEHEADER fileHeader;
-    BITMAPINFOHEADER infoHeader;
+	BITMAPFILEHEADER fileHeader;
+	BITMAPINFOHEADER infoHeader;
 
-    FILE* f1=fopen("dog.bmp","rb");
-    
-    fread(&fileHeader,sizeof(BITMAPFILEHEADER),1,f1);
-    fread(&infoHeader,sizeof(BITMAPINFOHEADER),1,f1);
-    
-    int height,width;
-    
-    width=infoHeader.biWidth;
-    height=infoHeader.biHeight;
-    
-    uc* r=(uc*)malloc(width*height);//¨ı¶‚Øx∞} 
-    uc* g=(uc*)malloc(width*height);//∫Ò¶‚Øx∞} 
-    uc* b=(uc*)malloc(width*height);//¬≈¶‚Øx∞} 
+	FILE* f1=fopen("dog.bmp","rb");
+
+	fread(&fileHeader,sizeof(BITMAPFILEHEADER),1,f1);
+	fread(&infoHeader,sizeof(BITMAPINFOHEADER),1,f1);
+
+	int height,width;
+
+	width=infoHeader.biWidth;
+	height=infoHeader.biHeight;
+
+	uc* r=(uc*)malloc(width*height);//Á¥ÖËâ≤Áü©Èô£ 
+	uc* g=(uc*)malloc(width*height);//Á∂†Ëâ≤Áü©Èô£ 
+	uc* b=(uc*)malloc(width*height);//ËóçËâ≤Áü©Èô£ 
 	
 	FILE* f2=fopen("Output.bmp","wb");
 	
